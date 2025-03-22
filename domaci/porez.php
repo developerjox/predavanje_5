@@ -1,8 +1,10 @@
 <?php
 
-$cena_proizvoda = $_GET["cena_proizvoda"];
-$izbor_proizvoda = $_GET["izbor_proizvoda"];
-$porez = $_GET["porez"];
+if($isset($_GET["cena_proizvoda"]) && isset($_GET["izbor_proizvoda"])) {
+  $cena_proizvoda = $_GET["cena_proizvoda"];
+  $izbor_proizvoda = $_GET["izbor_proizvoda"];
+}
+
 
 if($izbor_proizvoda == 1) {
   $cena = $cena_proizvoda + 50;
